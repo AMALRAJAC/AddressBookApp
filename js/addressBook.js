@@ -56,7 +56,7 @@ class AddressBook{
     }
     //method
     toString(){
-        return "id="+this.id+",FullName="+this.fullName+",Address"+this.address+",state="+this.state+",city="+this.city+",zip="+this.zip+",phone="+this.phone;
+        return "id="+Math.floor(Math.random()*100)+",FullName="+this.fullName+",Address"+this.address+",state="+this.state+",city="+this.city+",zip="+this.zip+",phone="+this.phone;
     }
 
 

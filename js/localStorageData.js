@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
     contactList=getContactArrayListFromStorage();
     document.querySelector(".emp-count").textContent=contactList.length;
     createInnerHtml();
+    localStorage.removeItem('edit');
 });
 const getContactArrayListFromStorage=()=>{
     return localStorage.getItem('ContactArrayList')?
@@ -25,9 +26,9 @@ const createInnerHtml=()=>{
         <td>${contact._zip}</td>
         <td>${contact._phone}</td>
         <td>
-        <img class="image" id="${contact._fullName}" onclick="remove(this)"
+        <img class="image" id="${contact._id}" onclick="remove(this)"
         src="images/delete.png" alt="delete">
-        <img class="image" id="${contact._fullName}" onclick="update(this)"
+        <img class="image" id="${contact._id}" onclick="update(this)"
         src="images/edit.png" alt="edit">
         </td>
         </tr>`;
@@ -36,13 +37,22 @@ const createInnerHtml=()=>{
     
 }
 
-const remove= (node)=>{
-    
-    let contactArray=contactList.find(contact=>contact._fullName==node._fullName);
+const remove=(node)=>{
+    contactList=getContactArrayListFromStorage();
+    let contactArray=contactList.find(contact=>contact._id==node._id);
+    console.log(contactArray);
     if(!contactArray) return;
-    const index=contactList.map(contact=>contact._fullName).indexOf(contactArray._fullName);
-    contactArray.splice(index,1);
+    const index=contactList.map(contact=>contact._id).indexOf(contactArray._id);
+    contactList.splice(index,1);
     localStorage.setItem("ContactArrayList",JSON.stringify(contactList));
     document.querySelector(".emp-count").textContent=contactList.length;
     createInnerHtml();
+}
+const update=(node)=>{
+    contactList=getContactArrayListFromStorage();
+    let contactArray=contactList.find(contact=>contact._id==node._id);
+    console.log(contactArray);
+    if(!contactArray) return;
+    localStorage.setItem('edit',JSON.stringify(contactArray))
+    window.location.replace(site_properties.add_emp_payroll_page);
 }

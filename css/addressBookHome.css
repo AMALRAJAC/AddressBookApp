@@ -1,3 +1,4 @@
+/* UC-1 */
 body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
@@ -51,6 +52,11 @@ body {
     border-radius: 1px;
     
   }
+  .cross{
+      height: 30px;
+      width: 30px;
+  }
+  /* UC-2 */
   
   .login h1 {
     height: 100px;

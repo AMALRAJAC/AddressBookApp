@@ -1,0 +1,40 @@
+{
+  "addressBook": [
+    {
+      "id": 1,
+      "_fullName": "Amalraj",
+      "_address": "Akkottuchalil",
+      "_state": "Kerala",
+      "_city": "kozhikkode",
+      "_zip": "12345",
+      "_phone": "90 9048031873"
+    },
+    {
+      "id": "4",
+      "_fullName": "Amal raj A C",
+      "_address": "akkottuchalil(h),mysoormala(po),mukkam(via)",
+      "_state": "Kerala",
+      "_city": "kozhikkode",
+      "_zip": "673602",
+      "_phone": "19 0048031873"
+    },
+    {
+      "id": "5",
+      "_fullName": "AMAL RAJ AC",
+      "_address": "5454646",
+      "_state": "Jharkhand",
+      "_city": "kozhikkode",
+      "_zip": "4879",
+      "_phone": "64 0098798989"
+    },
+    {
+      "id": "6",
+      "_fullName": "AMAL RAJ AC",
+      "_address": "5454646",
+      "_state": "Jharkhand",
+      "_city": "kozhikkode",
+      "_zip": "4879",
+      "_phone": "64 0098798989"
+    }
+  ]
+}
